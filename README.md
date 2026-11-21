@@ -130,7 +130,7 @@ Dados de exemplo: [docs/dados-exemplo.md](docs/dados-exemplo.md)
 
 ## Modelo de dados e decisões
 
-Ver [docs/decisoes.md](docs/decisoes.md).
+Ver [docs/decisoes.md](docs/documentacao.md).
 
 Resumo:
 
@@ -155,9 +155,6 @@ Resumo:
 - [x] Banco e aplicação executáveis conforme README
 - [x] Sem segredos reais no repositório
 
-## Limitações e próximos passos
-
-Limitações e melhorias futuras estão em [docs/decisoes.md](docs/decisoes.md).
 
 ## Status
 
