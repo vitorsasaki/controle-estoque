@@ -130,7 +130,7 @@ Dados de exemplo: [docs/dados-exemplo.md](docs/dados-exemplo.md)
 
 ## Modelo de dados e decisões
 
-Ver [docs/decisoes.md](docs/documentacao.md).
+Ver [docs/documentacao.md](docs/documentacao.md).
 
 Resumo:
 
