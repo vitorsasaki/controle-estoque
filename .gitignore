@@ -1,0 +1,35 @@
+### API ###
+controle-estoque-api/target/
+controle-estoque-api/.mvn/wrapper/maven-wrapper.jar
+controle-estoque-api/HELP.md
+
+### App ###
+controle-estoque-app/node_modules/
+controle-estoque-app/dist/
+controle-estoque-app/.vite/
+
+### IDE ###
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.project
+.classpath
+.settings/
+.apt_generated/
+.factorypath
+.springBeans
+.sts4-cache/
+
+### OS ###
+.DS_Store
+Thumbs.db
+
+### Env / secrets ###
+.env
+.env.*
+!.env.example
+
+### Logs ###
+*.log

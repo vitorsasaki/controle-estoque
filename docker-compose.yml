@@ -1,0 +1,46 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: controle-estoque-postgres
+    environment:
+      POSTGRES_DB: estoque
+      POSTGRES_USER: estoque
+      POSTGRES_PASSWORD: estoque
+    ports:
+      - "5432:5432"
+    volumes:
+      - controle_estoque_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U estoque -d estoque"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  api:
+    build:
+      context: ./controle-estoque-api
+    container_name: controle-estoque-api
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: estoque
+      DB_USER: estoque
+      DB_PASSWORD: estoque
+      SERVER_PORT: 8080
+    ports:
+      - "8080:8080"
+
+  app:
+    build:
+      context: ./controle-estoque-app
+    container_name: controle-estoque-app
+    depends_on:
+      - api
+    ports:
+      - "5173:80"
+
+volumes:
+  controle_estoque_pgdata:
